@@ -44,7 +44,14 @@ const corsOptions = {
   ],
   optionsSuccessStatus: 200
 };
-
+app.get("/test-db", async (req, res) => {
+  try {
+    const [rows] = await db.query("SHOW TABLES;");
+    res.json({ success: true, tables: rows });
+  } catch (err) {
+    res.json({ success: false, error: err.message });
+  }
+});
 // Appliquer CORS
 app.use(cors(corsOptions));
 
@@ -308,15 +315,6 @@ app.use((err, req, res, next) => {
 // 🚀 8. LANCEMENT DU SERVEUR
 // ============================================
 const PORT = process.env.PORT || 5000;
-app.get("/test-db", async (req, res) => {
-  try {
-    const [rows] = await db.query("SHOW TABLES;");
-    res.json({ success: true, tables: rows });
-  } catch (err) {
-    res.json({ success: false, error: err.message });
-  }
-});
-
 
 app.listen(PORT, () => {
   logger.success(`Serveur démarré sur port ${PORT}`);
