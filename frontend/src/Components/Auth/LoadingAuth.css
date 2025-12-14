@@ -1,0 +1,105 @@
+.loading-auth-container,
+.auth-error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.loading-auth-content,
+.auth-error-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.auth-error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.auth-error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.auth-retry-btn,
+.auth-logout-btn,
+.auth-login-redirect {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.auth-retry-btn {
+  background: #3498db;
+  color: white;
+}
+
+.auth-retry-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.auth-logout-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.auth-logout-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+.auth-redirect-info {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.auth-login-redirect {
+  background: #27ae60;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.auth-login-redirect:hover {
+  background: #219a52;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .auth-error-actions {
+    flex-direction: column;
+  }
+  
+  .auth-retry-btn,
+  .auth-logout-btn {
+    width: 100%;
+  }
+}

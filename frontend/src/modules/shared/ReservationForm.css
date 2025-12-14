@@ -1,0 +1,346 @@
+/* ReservationForm.css - Version compacte et scrollable */
+
+.reservation-form-container {
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.reservation-form-card {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  background: white;
+  animation: slideIn 0.3s ease forwards;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* En-tête compact */
+.titre-reservation {
+  text-align: center;
+  color: #2c5aa0;
+  margin: 0;
+  padding: 20px 20px 15px 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* Contenu scrollable */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 20px 20px 20px;
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(80vh - 80px);
+}
+
+/* Informations trajet compactes */
+.trajet-info {
+  background: #f8f9fa;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  margin: 0 20px 15px 20px;
+  font-size: 0.85rem;
+}
+
+.trajet-info h4 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.trajet-info p {
+  margin: 3px 0;
+  color: #495057;
+  font-size: 0.8rem;
+}
+
+/* Section arrêts compacte */
+.arrets-selection {
+  background: #f8f9fa;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  margin-bottom: 5px;
+}
+
+.arrets-selection h4 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Prix calculé compact */
+.prix-calcule {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 2px solid #28a745;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.prix-calcule strong {
+  color: #28a745;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.economie {
+  color: #6c757d;
+  font-size: 0.75rem;
+  background: #d4edda;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Champs de formulaire compacts */
+.reservation-form .input-group,
+.reservation-form .select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.reservation-form label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.reservation-form input,
+.reservation-form select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+  background: white;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+/* Actions du formulaire - TOUJOURS VISIBLE */
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding: 15px 0 0 0;
+  border-top: 1px solid #e9ecef;
+  position: sticky;
+  bottom: 0;
+  background: white;
+  z-index: 10;
+}
+
+/* Boutons */
+.form-actions button {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+/* Messages d'alerte compacts */
+.alert {
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin: 0 20px 15px 20px;
+  font-size: 0.8rem;
+  border: 1px solid transparent;
+}
+
+.success-msg {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.redirect-countdown {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #1a73e8;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.loader-mini {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #1a73e8;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Animations */
+.slide-in {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scrollbar personnalisée */
+.reservation-form::-webkit-scrollbar {
+  width: 4px;
+}
+
+.reservation-form::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.reservation-form::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+}
+
+.reservation-form::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* États de chargement */
+.reservation-form input:disabled,
+.reservation-form select:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 768px) {
+  .reservation-form-card {
+    max-height: 85vh;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .reservation-form {
+    max-height: calc(85vh - 70px);
+    padding: 0 15px 15px 15px;
+    gap: 0.8rem;
+  }
+  
+  .titre-reservation {
+    padding: 15px 15px 12px 15px;
+    font-size: 1.2rem;
+  }
+  
+  .trajet-info,
+  .arrets-selection {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 12px;
+  }
+  
+  .alert {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .form-actions {
+    gap: 0.6rem;
+    padding-top: 12px;
+  }
+  
+  .form-actions button {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservation-form-card {
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .reservation-form {
+    padding: 0 12px 12px 12px;
+    gap: 0.6rem;
+  }
+  
+  .titre-reservation {
+    padding: 12px 12px 10px 12px;
+    font-size: 1.1rem;
+  }
+  
+  .trajet-info h4,
+  .arrets-selection h4 {
+    font-size: 0.9rem;
+  }
+  
+  .reservation-form label {
+    font-size: 0.8rem;
+  }
+  
+  .reservation-form input,
+  .reservation-form select {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .prix-calcule {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .prix-calcule strong {
+    font-size: 0.9rem;
+  }
+}
+
+/* États de validation */
+.reservation-form input:valid,
+.reservation-form select:valid {
+  border-color: #28a745;
+}
+
+.reservation-form input:invalid:not(:focus):not(:placeholder-shown),
+.reservation-form select:invalid:not(:focus) {
+  border-color: #dc3545;
+}

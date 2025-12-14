@@ -1,0 +1,23 @@
+.hourpicker-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hourpicker-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.hourpicker-input {
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.hourpicker-input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}

@@ -1,0 +1,157 @@
+/* Modal.css - Version corrigée pour formulaire de réservation */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.modal-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  animation: modalAppear 0.3s ease-out;
+}
+
+/* Version compacte pour formulaire de réservation */
+.modal-box-compact {
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-title {
+  margin: 0;
+  padding: 20px 20px 0 20px;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 600;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+/* Contenu scrollable pour formulaire */
+.modal-content-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(90vh - 80px);
+  padding: 15px 20px;
+}
+
+.modal-close-x {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c757d;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.modal-close-x:hover {
+  background: #f8f9fa;
+  color: #dc3545;
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Scrollbar personnalisée */
+.modal-content-scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content-scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.modal-content-scrollable::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.modal-content-scrollable::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 15px;
+    align-items: flex-end;
+  }
+  
+  .modal-box {
+    max-width: 100%;
+    border-radius: 12px 12px 0 0;
+    max-height: 85vh;
+  }
+  
+  .modal-box-compact {
+    max-height: 80vh;
+  }
+  
+  .modal-content-scrollable {
+    max-height: calc(80vh - 70px);
+    padding: 10px 15px;
+  }
+  
+  .modal-title {
+    padding: 15px 15px 0 15px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-box {
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .modal-content {
+    padding: 15px;
+  }
+  
+  .modal-content-scrollable {
+    padding: 8px 12px;
+  }
+}

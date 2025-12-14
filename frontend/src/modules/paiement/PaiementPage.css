@@ -1,0 +1,400 @@
+/* PaiementPage.css - Version corrigée */
+
+.paiement-page-fullscreen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.paiement-card {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background: white;
+}
+
+.paiement-title {
+  text-align: center;
+  color: #2c5aa0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.paiement-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.paiement-recap {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  border: 1px solid #e9ecef;
+}
+
+.paiement-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.paiement-row:last-child {
+  border-bottom: none;
+}
+
+.paiement-row .label {
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
+}
+
+.paiement-row .value {
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+}
+
+.paiement-row .value.montant {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.paiement-actions {
+  margin-top: 25px;
+}
+
+/* Styles pour la fenêtre de redirection améliorée */
+.redirect-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Plus élevé pour être au-dessus de tout */
+}
+
+.redirect-message {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border: 2px solid #2c5aa0;
+  animation: popIn 0.3s ease-out;
+}
+
+/* ✅ AJOUT DES ANIMATIONS CORRECTEMENT */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+
+.redirect-message .spinner {
+  font-size: 35px;
+  margin-bottom: 15px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+.redirect-message h3 {
+  margin: 0 0 10px 0;
+  color: #2c5aa0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.redirect-message p {
+  margin: 0 0 15px 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.redirect-message .redirect-countdown {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .paiement-page-fullscreen {
+    padding: 15px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+  
+  .paiement-card {
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .paiement-title {
+    font-size: 22px;
+  }
+  
+  .paiement-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .paiement-row .value {
+    text-align: left;
+  }
+  
+  .redirect-message {
+    padding: 20px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paiement-card {
+    padding: 15px;
+  }
+  
+  .redirect-message {
+    padding: 15px;
+    max-width: 280px;
+  }
+  
+  .redirect-message h3 {
+    font-size: 16px;
+  }
+  
+  .redirect-message p {
+    font-size: 13px;
+  }
+}
+
+/* ✅ AJOUT : Styles pour la page de succès (pour éviter la duplication) */
+.success-card {
+  border: 2px solid #27ae60;
+}
+
+.success-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.success-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.success-title {
+  color: #27ae60;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.success-subtitle {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.recap-section {
+  margin: 25px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.recap-title {
+  color: #2c5aa0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.recap-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recap-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.recap-item:last-child {
+  border-bottom: none;
+}
+
+.recap-label {
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
+}
+
+.recap-value {
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+}
+
+.recap-value.highlight {
+  color: #2c5aa0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.recap-value.journey {
+  color: #2c5aa0;
+  font-weight: 600;
+}
+
+.recap-value.seat {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.recap-value.amount {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.print-section {
+  margin: 20px 0;
+}
+
+.print-button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.additional-actions {
+  margin-top: 25px;
+}
+
+.action-button {
+  margin-bottom: 15px;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.quick-actions button {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.error-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+/* Styles pour la fenêtre de traitement améliorée */
+.processing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.processing-message {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border: 2px solid #27ae60;
+  animation: popIn 0.3s ease-out;
+}
+
+.processing-message .spinner {
+  font-size: 35px;
+  margin-bottom: 15px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+.processing-message h3 {
+  margin: 0 0 10px 0;
+  color: #27ae60;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.processing-message p {
+  margin: 0 0 15px 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Styles pour l'impression */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .paiement-page-fullscreen {
+    background: white !important;
+    padding: 0 !important;
+  }
+  
+  .paiement-card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    max-width: none !important;
+  }
+}

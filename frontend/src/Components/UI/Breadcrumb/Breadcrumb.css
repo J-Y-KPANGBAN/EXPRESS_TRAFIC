@@ -1,0 +1,29 @@
+.ui-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item .active {
+  color: #555;
+  font-weight: 600;
+}
+
+.separator {
+  margin: 0 8px;
+  color: #666;
+}

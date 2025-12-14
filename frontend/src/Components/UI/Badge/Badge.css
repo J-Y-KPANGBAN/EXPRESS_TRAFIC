@@ -1,0 +1,29 @@
+.ui-badge {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  color: white;
+}
+
+.ui-badge.default {
+  background: #6c757d;
+}
+
+.ui-badge.success {
+  background: #28a745;
+}
+
+.ui-badge.warning {
+  background: #ffc107;
+  color: #333;
+}
+
+.ui-badge.error {
+  background: #dc3545;
+}
+
+.ui-badge.info {
+  background: #17a2b8;
+}

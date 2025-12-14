@@ -1,0 +1,344 @@
+/* Contact.css */
+.contact-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  border: 1px solid #e9ecef;
+  margin: 0 auto;
+}
+
+.contact-header {
+  background: #2c3e50;
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.contact-form {
+  padding: 1.5rem;
+}
+
+.form-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #28a745;
+  display: inline-block;
+}
+
+/* ESPACEMENT AMÉLIORÉ POUR LES CHAMPS NOM/PRÉNOM */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.5rem; /* espace horizontal entre les champs */
+  row-gap: 1.2rem;    /* espace vertical entre les lignes */
+  margin-bottom: 1.5rem;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.6rem 0.8rem;
+  border: 2px solid #e9ecef;
+  border-radius: 0.4rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: white;
+  height: auto;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+  font-family: inherit;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.submit-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 180px;
+  justify-content: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  background: #218838;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-btn.loading {
+  background: #6c757d;
+}
+
+.spinner {
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.contact-info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.contact-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1.2rem;
+  background: white;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.contact-method:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.method-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.method-info h4 {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.2rem;
+  font-size: 0.95rem;
+}
+
+.method-info p {
+  color: #495057;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.method-info small {
+  color: #6c757d;
+  font-size: 0.7rem;
+}
+
+/* Alert styles */
+.alert-container {
+  margin-bottom: 1.5rem;
+}
+
+/* Version très compacte pour desktop */
+@media (min-width: 1024px) {
+  .contact-card {
+    max-width: 700px;
+  }
+  
+  .contact-form {
+    padding: 1.25rem;
+  }
+  
+  .form-row {
+    gap: 1.2rem; /* Légèrement réduit mais toujours espacé */
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.5rem 0.7rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 0.8rem;
+  }
+  
+  .contact-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .contact-header h1 {
+    font-size: 1.7rem;
+  }
+  
+  .contact-form {
+    padding: 1.25rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0.8rem; /* Sur mobile, une colonne donc pas besoin de grand espacement */
+  }
+  
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-method {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-form {
+    padding: 1rem;
+  }
+  
+  .form-section {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    min-width: auto;
+    padding: 0.7rem 1.5rem;
+  }
+  
+  .contact-card {
+    border-radius: 0.8rem;
+  }
+}
+/* Fix espacement champs côte à côte — coller à la fin du fichier pour prioriser */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.5rem; /* espace horizontal entre les champs */
+  row-gap: 1.2rem;    /* espace vertical entre les lignes */
+  margin-bottom: 1.5rem;
+  align-items: start;
+}
+
+/* important: permet aux enfants de la grille de réduire correctement leur taille */
+.form-row > .form-group {
+  min-width: 0;
+}
+
+/* s'assurer que les inputs ne débordent pas et remplissent la colonne */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* override du media query desktop qui réduisait le gap */
+@media (min-width: 1024px) {
+  .form-row {
+    column-gap: 2.5rem; /* remettre l'espacement souhaité pour grand écran */
+    row-gap: 1.2rem;
+  }
+}

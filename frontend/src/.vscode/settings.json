@@ -1,0 +1,58 @@
+{
+  // Configuration pour les imports avec alias
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  
+  // Activation de la prise en charge de jsconfig.json
+  "typescript.validate.enable": true,
+  "javascript.validate.enable": true,
+  
+  // Suggestions d'import automatiques
+  "typescript.suggest.autoImports": true,
+  "javascript.suggest.autoImports": true,
+  
+  // Chemins de base pour les imports
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "javascript.preferences.includePackageJsonAutoImports": "auto",
+  
+  // Configuration des chemins pour les alias
+  "typescript.preferences.paths": [
+    "@/*",
+    "@/Components/*",
+    "@/modules/*", 
+    "@/api/*",
+    "@/Context/*",
+    "@/hooks/*",
+    "@/stylesApp/*",
+    "@/assets/*"
+  ],
+  "javascript.preferences.paths": [
+    "@/*",
+    "@/Components/*",
+    "@/modules/*",
+    "@/api/*", 
+    "@/Context/*",
+    "@/hooks/*",
+    "@/stylesApp/*",
+    "@/assets/*"
+  ],
+  
+  // Autres paramètres utiles pour React
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  
+  // Formatage automatique
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  
+  // Coloration syntaxique améliorée
+  "editor.semanticHighlighting.enabled": true,
+  
+  // Suggestions améliorées
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.showKeywords": true
+}

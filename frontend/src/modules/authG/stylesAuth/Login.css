@@ -1,0 +1,138 @@
+/* ============================
+   LOGIN PAGE CONTAINER
+============================ */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: #f5f7fa;
+}
+
+/* ============================
+   CARD
+============================ */
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.auth-subtitle {
+  color: #6c757d;
+  margin-top: 0.4rem;
+}
+
+/* ============================
+   FORM
+============================ */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.auth-btn {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+/* ============================
+   FOOTER LINKS
+============================ */
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.auth-link {
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.admin-link {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.3rem;
+  }
+}
+/* frontend/src/modules/authG/stylesAuth/Login.css - AJOUTS */
+
+.forgot-password-link {
+  text-align: right;
+  margin: 10px 0 20px 0;
+}
+
+.forgot-password-btn {
+  background: none;
+  border: none;
+  color: #2c5aa0;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-btn:hover {
+  color: #1d3d6e;
+  text-decoration: underline;
+}
+
+.forgot-password-btn:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.success-message {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #28a745;
+}
+
+.success-text {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.success-note {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}

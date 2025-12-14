@@ -1,0 +1,11 @@
+.ui-avatar {
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #f0f0f0;
+  background-color: #eee;
+  display: inline-block;
+}
+
+.ui-avatar.rounded {
+  border-radius: 50%;
+}

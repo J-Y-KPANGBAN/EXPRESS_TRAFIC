@@ -1,0 +1,107 @@
+/* FOOTER BACKGROUND bleu corsair */
+.footer {
+  background: #263648; /* légèrement + foncé et pro */
+  color: #fff;
+  padding: 40px 0 25px; /* ↓ Hauteur réduite */
+  margin-top: 60px;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+/* GRID structure */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+}
+
+/* BRAND */
+.footer-brand h3 {
+  font-size: 24px; /* réduit */
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.footer-brand span {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.footer-desc {
+  margin: 10px 0 18px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* TITLES */
+.footer-subtitle {
+  font-size: 15px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* LINKS */
+.footer-link {
+  display: block;
+  font-size: 14px;
+  color: #dce3ec;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* SOCIAL ICONS */
+.social-logos {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-logo img {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+  opacity: 0.9;
+}
+
+.social-logo img:hover {
+  transform: scale(1.12);
+  opacity: 1;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.85;
+}
+/* Couleur des liens du footer */
+.footer a,
+.footer-link,
+.footer-brand,
+.footer-brand h3,
+.footer-brand span {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* Au survol */
+.footer a:hover,
+.footer-link:hover,
+.footer-brand:hover {
+  color: #dfe6f3 !important;
+}

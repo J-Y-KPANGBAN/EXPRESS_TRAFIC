@@ -1,0 +1,120 @@
+/* ========================= */
+/*        HEADER GLOBAL      */
+/* ========================= */
+
+.header {
+  background: #00264D;
+  color: white;
+  padding: 12px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+}
+
+.header .container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+/* NAV LINKS DESKTOP */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* BURGER MENU */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-label span::before { top: -8px; }
+.nav-toggle-label span::after { top: 8px; }
+
+/* MOBILE MENU */
+@media (max-width: 900px) {
+
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #00264D;
+    padding: 100px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: 0.4s;
+    z-index: 9998;
+  }
+
+  /* OPEN MENU */
+  .nav-toggle:checked + .nav-toggle-label + .nav-links {
+    right: 0;
+  }
+
+  /* X animation */
+  .nav-toggle:checked + .nav-toggle-label span {
+    background: transparent;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}

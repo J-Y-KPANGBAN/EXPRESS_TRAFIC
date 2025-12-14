@@ -1,0 +1,274 @@
+/* ============================
+   GLOBAL WRAPPER - CENTRAGE ÉLARGI
+============================ */
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #eef2f7, #dfe6ef);
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* ✅ AUGMENTÉ de 500px à 600px */
+  margin: 0 auto;
+}
+
+/* ============================
+   CARD BEAUCOUP PLUS LARGE
+============================ */
+.signup-card {
+  width: 100%;
+  padding: 3rem; /* ✅ ENCORE PLUS D'ESPACE INTERNE */
+  border-radius: 16px; /* ✅ COINS PLUS ARRONDIS */
+  background: #ffffff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* ✅ OMBRE PLUS PRONONCÉE */
+}
+
+/* Header avec encore plus d'impact */
+.signup-header-centered {
+  text-align: center;
+  margin-bottom: 3rem; /* ✅ ESPACE AUGMENTÉ */
+  padding-bottom: 2rem;
+  border-bottom: 3px solid #f0f2f5; /* ✅ BORDURE PLUS ÉPAISSE */
+}
+
+.signup-title {
+  font-size: 2rem; /* ✅ TITRE PLUS GRAND */
+  font-weight: 800;
+  color: #1a365d;
+  margin: 0 0 1rem 0;
+}
+
+.signup-subtitle {
+  color: #718096;
+  font-size: 1.1rem; /* ✅ SOUS-TITRE PLUS GRAND */
+  margin: 0;
+  line-height: 1.5;
+}
+
+.signup-icon {
+  font-size: 3rem; /* ✅ ICÔNE PLUS GRANDE */
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* ============================
+   FORMULAIRE BIEN PLUS ESPACÉ
+============================ */
+.signup-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* ✅ ESPACE DOUBLÉ ENTRE LES SECTIONS */
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem; /* ✅ ESPACE AUGMENTÉ ENTRE CHAMPS */
+}
+
+.form-row > * {
+  flex: 1;
+}
+
+/* ============================
+   CHAMPS BEAUCOUP PLUS GRANDS
+============================ */
+.form-input {
+  width: 100%;
+  height: 3.5rem; /* ✅ CHAMPS ENCORE PLUS HAUTS */
+  padding: 1rem 1.25rem;
+  border: 2px solid #e2e8f0; /* ✅ BORDURE PLUS ÉPAISSE */
+  border-radius: 10px; /* ✅ COINS PLUS ARRONDIS */
+  font-size: 1.1rem; /* ✅ TEXTE PLUS GRAND */
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.15); /* ✅ OMBRE FOCUS PLUS GRANDE */
+}
+
+/* ============================
+   SECTIONS AVEC PLUS D'ESPACE
+============================ */
+.form-section {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.form-section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* ============================
+   BOUTON TRÈS VISIBLE
+============================ */
+.submit-btn {
+  width: 100%;
+  padding: 1.25rem 2rem; /* ✅ BOUTON BEAUCOUP PLUS GRAND */
+  margin: 2rem auto 0;
+  font-size: 1.2rem; /* ✅ TEXTE PLUS GRAND */
+  font-weight: 700;
+  border-radius: 12px; /* ✅ COINS PLUS ARRONDIS */
+  display: block;
+  background: #4299e1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(66, 153, 225, 0.3);
+}
+
+.submit-btn:hover {
+  background: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.4);
+}
+
+/* ============================
+   CHECKBOX PLUS GRANDE
+============================ */
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.form-checkbox {
+  margin-top: 0.25rem;
+  transform: scale(1.3); /* ✅ CHECKBOX PLUS GRANDE */
+}
+
+.checkbox-label {
+  font-size: 1rem; /* ✅ TEXTE PLUS GRAND */
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* ============================
+   FOOTER PLUS ÉPANOUI
+============================ */
+.signup-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem; /* ✅ TEXTE PLUS GRAND */
+  color: #718096;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ============================
+   RESPONSIVE POUR GRAND ÉCRAN
+============================ */
+@media (min-width: 1200px) {
+  .signup-container {
+    max-width: 650px; /* ✅ ENCORE PLUS LARGE SUR GRANDS ÉCRANS */
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    max-width: 550px; /* ✅ MOBILE PLUS LARGE */
+  }
+  
+  .signup-card {
+    padding: 2.5rem;
+  }
+
+  .signup-title {
+    font-size: 1.8rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .form-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+    max-width: 100%;
+  }
+  
+  .signup-card {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+
+  .signup-title {
+    font-size: 1.6rem;
+  }
+  
+  .form-input {
+    height: 3.25rem;
+    font-size: 1.05rem;
+  }
+  
+  .submit-btn {
+    padding: 1.1rem 1.5rem;
+    font-size: 1.15rem;
+  }
+}
+
+/* ============================
+   ANIMATIONS RENFORCÉES
+============================ */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signup-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* ============================
+   EFFET DE PROFONDEUR
+============================ */
+.signup-card {
+  position: relative;
+}
+
+.signup-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0.1;
+  filter: blur(15px);
+}

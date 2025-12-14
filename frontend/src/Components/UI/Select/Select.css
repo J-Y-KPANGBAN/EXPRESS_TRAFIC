@@ -1,0 +1,12 @@
+.select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.select-input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+}

@@ -1,0 +1,510 @@
+/* =========================================
+   🎴 STYLES PRINCIPAUX
+========================================= */
+.trajet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================
+   📅 NAVIGATION PAR DATE
+========================================= */
+.date-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.date-nav-btn {
+  background: #6c757d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  min-width: 100px;
+}
+
+.date-nav-btn:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.current-date {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  min-width: 180px;
+  border: 1px solid #dee2e6;
+}
+
+.current-date.highlighted {
+  border-bottom: 3px solid #007bff;
+}
+
+/* =========================================
+   🎴 GRILLE DES TRAJETS
+========================================= */
+.trajets-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trajet-card {
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  background: white;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.trajet-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  border-color: #007bff;
+}
+
+.trajet-content {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr auto;
+  gap: 20px;
+  align-items: start;
+}
+
+.trajet-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Colonne Itinéraire */
+.itinerary .cities {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.city-depart, .city-arrivee {
+  color: #333;
+}
+
+.arrow {
+  color: #333;
+  font-weight: bold;
+}
+
+.company {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.trajet-info {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.duree {
+  font-weight: 500;
+}
+
+.arrets-count {
+  color: #666;
+}
+
+/* =========================================
+   🔧 SECTION ÉQUIPEMENTS
+========================================= */
+.equipements-section {
+  margin-top: 8px;
+}
+
+.equipements-toggle {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.equipements-toggle:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+}
+
+.equipements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.equipment-item {
+  background: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  white-space: nowrap;
+}
+
+/* Colonne Date/Heure */
+.datetime .date-time {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.time {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.arrival-info {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Colonne Prix */
+.price-bus .price-type {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.bus-type {
+  background: #e9ecef;
+  color: #495057;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.capacity {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+/* Colonne Action */
+.reserve-btn {
+  font-weight: 600;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.reserve-btn:hover:not(:disabled) {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+.reserve-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* =========================================
+   📄 ÉTATS DE CHARGEMENT ET VIDE
+========================================= */
+.loading-container,
+.no-results-container {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.loading-message {
+  font-size: 16px;
+  color: #666;
+}
+
+.no-results {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.no-results-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+/* =========================================
+   📄 PAGINATION
+========================================= */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination-info {
+  font-weight: 600;
+  color: #333;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.pagination-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #dee2e6;
+  background: white;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 44px;
+  text-align: center;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination-btn.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination-btn:disabled {
+  background: #f8f9fa;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pagination-btn.prev-next {
+  min-width: 100px;
+  font-weight: 600;
+}
+
+/* =========================================
+   📱 RESPONSIVE DESIGN
+========================================= */
+@media (max-width: 1024px) {
+  .trajet-list {
+    padding: 0 15px;
+  }
+  
+  .trajet-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .action {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .trajet-list {
+    padding: 0 10px;
+  }
+  
+  .trajet-card {
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  .trajet-content {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .date-navigation {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  .date-nav-btn {
+    min-width: 80px;
+    padding: 8px 15px;
+  }
+  
+  .current-date {
+    min-width: 150px;
+    order: -1;
+  }
+  
+  .cities {
+    justify-content: center;
+  }
+  
+  .price-type {
+    align-items: center;
+  }
+  
+  .equipements-list {
+    justify-content: center;
+  }
+  
+  .pagination {
+    gap: 0.5rem;
+  }
+  
+  .pagination-info {
+    order: -1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pagination-numbers {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .pagination-btn.prev-next {
+    min-width: 80px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trajet-list {
+    padding: 0 5px;
+  }
+  
+  .trajet-card {
+    padding: 12px;
+  }
+  
+  .cities {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .date-navigation {
+    padding: 10px;
+  }
+  
+  .date-nav-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: 70px;
+  }
+  
+  .current-date {
+    font-size: 14px;
+    padding: 8px 15px;
+    min-width: 130px;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .pagination-info {
+    order: 0;
+    width: auto;
+  }
+  
+  .pagination-numbers {
+    order: 1;
+  }
+  
+  .pagination-btn.prev-next {
+    order: 2;
+    width: 100%;
+    max-width: 200px;
+  }
+}

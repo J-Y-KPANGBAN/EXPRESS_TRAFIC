@@ -1,0 +1,143 @@
+.expedia-search-container {
+  padding: 20px;
+  border: 2px solid #ffb300;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --------- Ligne du haut -------- */
+.expedia-top-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+/* --------- Grille Principale -------- */
+.expedia-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 60px 1.5fr 1.2fr 1.2fr 1fr 1fr;
+  gap: 12px;
+  align-items: end;
+}
+
+/* Champ */
+.expedia-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.expedia-label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Swap bouton */
+.expedia-swap {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  font-size: 22px;
+  transition: 0.2s;
+}
+.expedia-swap:hover {
+  background: #e2e2e2;
+}
+
+/* Bouton explorer */
+.expedia-btn {
+  height: 48px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+/* Incrémenteur passagers */
+.passenger-increment {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  height: 48px;
+}
+
+.passenger-btn {
+  background: none;
+  border: none;
+  padding: 0 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #374151;
+  transition: all 0.2s;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.passenger-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.passenger-btn:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.passenger-count {
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 40px;
+  text-align: center;
+  border-left: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 1000px) {
+  .expedia-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .expedia-btn {
+    grid-column: 1 / -1;
+  }
+
+  .expedia-swap {
+    order: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .expedia-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .passenger-increment {
+    height: 44px;
+  }
+}
+/* Styles pour la recherche avancée */
+.expedia-field .expedia-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+/* Indication visuelle pour la recherche d'arrêts */
+.search-hint {
+  font-size: 0.8rem;
+  color: #28a745;
+  margin-top: 0.25rem;
+  display: block;
+}

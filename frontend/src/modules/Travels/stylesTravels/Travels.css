@@ -1,0 +1,129 @@
+.travels-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.travels-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+}
+
+.travels-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.travels-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.travels-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-section {
+  margin-bottom: 0.5rem;
+}
+
+/* Barre de contrôle optimisée */
+.controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.results-count {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.filters-toggle-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #3498db;
+  background: white;
+  color: #3498db;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.filters-toggle-btn:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.trajets-section {
+  min-height: 400px;
+}
+
+/* Responsive optimisé */
+@media (max-width: 768px) {
+  .travels-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .travels-header {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .travels-header h1 {
+    font-size: 2rem;
+  }
+  
+  .travels-header p {
+    font-size: 1.1rem;
+  }
+  
+  .controls-bar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .filters-toggle-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .results-count {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .travels-container {
+    padding: 0.5rem;
+  }
+  
+  .travels-header {
+    padding: 1rem 0.5rem;
+  }
+  
+  .travels-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .travels-header p {
+    font-size: 1rem;
+  }
+}

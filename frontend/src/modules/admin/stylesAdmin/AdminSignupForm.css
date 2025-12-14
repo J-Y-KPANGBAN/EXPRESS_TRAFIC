@@ -1,0 +1,32 @@
+.admin-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.admin-submit-btn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.error-text {
+  color: #d00;
+  font-size: 0.85rem;
+}
+
+.admin-code-help,
+.password-requirements {
+  font-size: 0.85rem;
+  color: #666;
+}

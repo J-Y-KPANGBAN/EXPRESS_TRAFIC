@@ -1,0 +1,110 @@
+/* frontend/src/stylesAdmin/SystemSettings.css */
+.system-settings {
+  padding: 20px;
+}
+
+.settings-tabs {
+  margin-top: 20px;
+}
+
+.tab-navigation {
+  display: flex;
+  border-bottom: 1px solid #e1e5e9;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #495057;
+  background-color: #f8f9fa;
+}
+
+.tab-button.active {
+  color: #007bff;
+  border-bottom-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.tab-content {
+  min-height: 400px;
+}
+
+.form-help {
+  font-size: 12px;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+.form-actions {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e5e9;
+  display: flex;
+  gap: 10px;
+}
+
+.security-stats {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e5e9;
+}
+
+.security-stats h4 {
+  margin-bottom: 15px;
+  color: #495057;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: #495057;
+}
+
+.log-message {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.log-details {
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.health-status {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mobile-config-preview .config-item {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.mobile-config-preview .config-item strong {
+  display: inline-block;
+  width: 100px;
+  color: #495057;
+}
