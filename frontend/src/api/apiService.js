@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Configuration centralisée
 const API_CONFIG = {
-  baseURL: process.env.REACT_APP_API_URL || "https://express-trafic-1.onrender.com",
+  baseURL: process.env.REACT_APP_API_URL || "https://express-trafic.onrender.com",
   timeout: 15000,
   retryAttempts: 3,
   retryDelay: 1000
